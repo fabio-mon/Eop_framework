@@ -74,7 +74,7 @@ namespace FitUtils
       c_template_fit.cd();
       rp = h -> Fit(fitfunc, fitopt.c_str());
       fStatus = rp;
-      if(fStatus != 4 && fitfunc->GetParError(1) != 0. )
+      if(fStatus != 4 && fitfunc->GetParError(1) != 0. && fitfunc->GetParameter(1) != 0.99)
       {
 	if(TemplatePlotsFolder!="")
 	{
